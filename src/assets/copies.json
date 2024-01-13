@@ -2,5 +2,35 @@
   "header": "Remote work should be a sociable experience.",
   "subHeader": "<b>Discover public spaces</b> like cafes and malls to work from <br/> + <br/> Enjoy lasting experiences with <b>like minded folks</b> like you.",
   "primaryCTAButton": "Sign me up!",
-  "primaryCTAButtonSubText": "Do more. Experience more. Make living worth it."
+  "primaryCTAButtonSubText": "Do more. Experience more. Make living worth it.",
+  "quote1": "The upgrade from 'Work from home' to 'Work from spaces that make you feel the most productive'.",
+  "header2": "So, what exactly is nearwork?",
+  "subHeader2": "We humans are social beings, and we like to belong, have fun and enjoy experiences together. Remote work has caused a major decline in this behavior in spite of it being logically convenient for everything else. This is what we are trying to solve, to help you stay productive and social while you make the most out of living your remote and free life.",
+  "featuresHeader": "or if you like diagrams (the arrows don't mean anything, it just looked cool",
+  "featuresFooter": "TLDR; Combining the freedom of remote work and the social engagements of in person (aka the best of both worlds)",
+  "features": [
+    {
+      "description": "Discover workable public spaces like cafes and malls near you.",
+      "bgColor": "#B8D0FF",
+      "title": "Find.",
+      "image": "featureFind"
+    },
+    {
+      "description": "Meet and connect with peers in public spaces through coffee chats.",
+      "bgColor": "rgba(255, 64, 88, 0.61)",
+      "title": "Network.",
+      "image": "featureNetwork"
+    },
+    {
+      "description": "Engage in fun social experiences conducted to help you bond better with your tribe.",
+      "bgColor": "#FFF48E",
+      "title": "Have fun.",
+      "image": "featureFun"
+    }
+  ],
+  "header3": "Interested in what we're building?",
+  "footerSubHeading": "Maximize your productivity with all the benefits of remote working.",
+  "footerHeading": "Explore more places. Meet new people. Be free",
+  "waitlistCtaHeadingCopy": "We're building something to revolutionize how we all work. Help us build it better.",
+  "waitlistCtaBtnCopy": "Join the waitlist"
 }

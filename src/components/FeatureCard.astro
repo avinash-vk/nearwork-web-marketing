@@ -1,0 +1,27 @@
+---
+import { Image } from 'astro:assets';
+const { description, bgColor, title, image } = Astro.props;
+const images = import.meta.glob("../assets/images/*");
+---
+
+<div class="border-4 rounded-[32px] border-black min-h-[140px] flex items-center p-2" style={`
+    background: linear-gradient(180deg, ${bgColor} 0%, rgba(255, 64, 88, 0.00) 100%);
+`}>
+<div class="border-2 border-black rounded-[32px] h-full items-center justify-center flex flex-col px-6 py-4">
+    <h4 class="text-lg font-bold text-center" style="line-height: normal;">
+        {title}
+    </h4>
+    <Image src={images[`../assets/images/${image}.png`]()} alt={title} loading="lazy" height={170} width={170} class="img" />
+    <h4 class="text-lg font-bold text-center" style="line-height: normal;">
+        {description}
+    </h4>
+</div>
+</div>
+
+<style>
+img {
+    margin: 20px auto;
+    border: 4px solid black;
+    border-radius: 50%;
+}
+</style>

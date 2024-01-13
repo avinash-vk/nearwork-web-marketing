@@ -3,6 +3,7 @@ import LandingPageLayout from '../layouts/LandingPageLayout.astro';
 import Button from '../components/Button.astro'
 import COPIES from '../assets/copies.json';
 import HeaderImage from '../assets/images/header.png';
+import FeatureCard from '../components/FeatureCard.astro';
 ---
 
 <LandingPageLayout>
@@ -22,6 +23,53 @@ import HeaderImage from '../assets/images/header.png';
 		</div>
 		<div class="h-full overflow-hidden w-2/5 flex items-center justify-center">
 			<img src={HeaderImage.src} alt="hero-image" class="header-image" />
+		</div>
+	</div>
+	<div class="filler flex">
+		<div class="quotebox" style="background-color: rgba(255, 64, 88, 0.58)">
+			<h4 class="font-poly text-3xl justify-center text-center" set:html={COPIES.quote1} />
+		</div>
+	</div>
+	<div class="section h-full flex w-100 flex-col">
+		<h2 class="text-4xl font-bold header-copy mt-10">
+			{COPIES.header2}
+		</h2>
+		<h4 class="font-dmsans text-lg mt-4" style="line-height: normal;">
+			{COPIES.subHeader2}
+		</h4>
+		<p class="mt-8">{COPIES.featuresHeader}</p>
+		<div class="feature-container grid-cols-3 grid gap-x-24 gap-y-8 justify-around mt-2">
+			{
+				COPIES?.features?.map(({description, bgColor, title, image }, index) => (
+					<FeatureCard title={title} description={description} bgColor={bgColor} image={image} key={index} />
+				))
+			}
+		</div>
+		<p class="mt-2">{COPIES.featuresFooter}</p>
+	</div>
+	<div class="filler flex" style="margin-top:160px">
+		<div class="quotebox" style="background-color: rgba(255, 64, 88, 0.58)">
+			<h4 class="font-poly text-3xl justify-center text-center" set:html={COPIES.quote1} />
+		</div>
+	</div>
+	<div class="section" style="height:100% !important">
+		<h2 class="text-4xl font-bold header-copy">
+			{COPIES.header3}
+		</h2>
+		<h4 class="text-lg font-semibold text-[#5A5A5A] mt-12" style="line-height: normal;">
+			{COPIES.footerSubHeading}
+		</h4>
+		<h3 class="font-dmsans text-4xl text-[#AC0CF7]" style="line-height: normal;">
+			{COPIES.footerHeading}
+		</h3>
+		<p class="font-dmsans text-lg mt-12">
+			{COPIES.waitlistCtaHeadingCopy}
+		</p>
+		<div class="mt-4 border-2 rounded-xl border-black" style="width:max-content; overflow:hidden;">
+			<input type="text" placeholder="Email address" class="px-4 h-full border-0 outline-none" style="width: 400px" />
+			<button class="bg-black px-6 py-3 border-l-2 border-black text-white font-semibold" style="background: linear-gradient(90deg, #FF4058 0%, #AC0CF7 102.14%);">
+				{COPIES.waitlistCtaBtnCopy}
+			</button>
 		</div>
 	</div>
 </LandingPageLayout>
