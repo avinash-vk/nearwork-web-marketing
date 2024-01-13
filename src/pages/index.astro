@@ -1,16 +1,47 @@
 ---
-
+import LandingPageLayout from '../layouts/LandingPageLayout.astro';
+import Button from '../components/Button.astro'
+import COPIES from '../assets/copies.json';
+import HeaderImage from '../assets/images/header.png';
 ---
 
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
-	</head>
-	<body>
-		<h1>Astro</h1>
-	</body>
-</html>
+<LandingPageLayout>
+	<div class="section flex w-100">
+		<div class="h-full flex flex-col w-3/5 items-start">
+			<h3 class="text-2xl font-bold text-[#5A5A5A]">nearwork.space</h3>
+			<h1 class="text-4xl font-bold header-copy mt-10">
+				{COPIES.header}
+			</h1>
+			<div class="line mt-5" />
+			<h2 class="text-3xl subheader mt-5 pr-12" set:html={COPIES.subHeader} />
+			<span class="mt-auto" />
+			<Button>
+				{COPIES.primaryCTAButton}
+			</Button>
+			<p class="text-stone-400 text-sm mt-2 mx-1">{COPIES.primaryCTAButtonSubText}</p>
+		</div>
+		<div class="h-full overflow-hidden w-2/5 flex items-center justify-center">
+			<img src={HeaderImage.src} alt="hero-image" class="header-image" />
+		</div>
+	</div>
+</LandingPageLayout>
+<style>
+	.header-copy {
+		background: linear-gradient(90deg, #FF4058 0%, #AC0CF7 102.14%);
+		background-clip: text;
+		-webkit-background-clip: text;
+		-webkit-text-fill-color: transparent;
+	}
+	.line {
+		height: 4px;
+		width: 80%;
+		background-color: #E9E9E9
+	}
+	.header-image {
+		height: 400px;
+		width: 400px;
+		object-fit: cover;
+		border-radius: 100%;
+		border: 4px solid #222;
+	}
+</style>
