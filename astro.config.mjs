@@ -1,4 +1,5 @@
 import { defineConfig, squooshImageService } from "astro/config";
+import vercelStatic from "@astrojs/vercel/static";
 
 import tailwind from "@astrojs/tailwind";
 
@@ -8,4 +9,6 @@ export default defineConfig({
   image: {
     service: squooshImageService(),
   },
+  output: "static",
+  adapter: vercelStatic(),
 });
